@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.style.scss']
 })
 export class HeaderComponent {
+  sidebarToggle() {
 
+  }
 }

@@ -4,7 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
 import {DashboardModule} from './dashboard/dashboard.module';
 import {HeaderModule} from './header/header.module';
-
+import {SidebarModule} from './sidebar/sidebar.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +12,8 @@ import {HeaderModule} from './header/header.module';
     BrowserModule,
     DashboardModule,
     BrowserAnimationsModule,
-    HeaderModule
+    HeaderModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

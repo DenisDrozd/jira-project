@@ -2,10 +2,22 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "module": "es2015",
+    "types": [
+      "jasmine",
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@styles/*": ["styles/*"]
+    }
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "../**/*.unit.ts",
+    "../**/*.e2e.ts",
+    "../**/*.pageObject.ts"
   ]
 }

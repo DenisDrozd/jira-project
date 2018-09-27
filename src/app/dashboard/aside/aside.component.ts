@@ -7,10 +7,10 @@ import {CLASS_STATUS_COLOR, STATUS_NAME} from '../../models/type-task.model';
   styleUrls: ['./aside.style.scss']
 })
 export class AsideComponent {
-  @Input() item;
+  @Input() item: any;
   @Output() close: EventEmitter<any> = new EventEmitter();
 
-  closeAside() {
+  closeAside($event) {
     this.close.emit(null);
   }
 

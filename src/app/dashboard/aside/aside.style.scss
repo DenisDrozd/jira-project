@@ -1,11 +1,14 @@
 @import 'src/styles/colors';
 @import 'src/styles/task-colors';
-@import 'src/styles/status-colors';
 
 :host {
   display: block;
   border-left: 1px solid $color-border;
   background-color: $color-background;
+}
+
+.close {
+  background-color: greenyellow;
 }
 
 .aside {
@@ -18,10 +21,3 @@
   }
 }
 
-.status {
-  font-size: 12px;
-  font-weight: bold;
-  padding: 2px 5px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}

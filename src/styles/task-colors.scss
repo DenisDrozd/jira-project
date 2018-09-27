@@ -1,0 +1,21 @@
+@import 'src/styles/colors';
+
+.b-task {
+  background-color: $color-task;
+}
+
+.b-bugfix {
+  background-color: $color-bugfix;
+}
+
+.b-epic {
+  background-color: $color-epic;
+}
+
+.b-story {
+  background-color: $color-story;
+}
+
+.b-subtask {
+  background-color: $color-subtask;
+}

@@ -1,0 +1,18 @@
+@import 'colors';
+
+.status-to-to {
+  color: $color-status-init-text;
+  background-color: $color-status-init;
+}
+
+.status-in-progress,
+.status-codereview,
+.status-in-qa {
+  color: $color-status-progress-text;
+  background-color: $color-status-progress;
+}
+
+.color-done {
+  color: $color-status-done-text;
+  background-color: $color-status-done;
+}

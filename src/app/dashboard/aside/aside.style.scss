@@ -1,17 +1,19 @@
 @import 'src/styles/colors';
+@import 'src/styles/task-colors';
+@import 'src/styles/status-colors';
 
 :host {
   display: block;
-  border-right: 1px solid $color-border;
+  border-left: 1px solid $color-border;
   background-color: $color-background;
 }
 
-.sidebar {
+.aside {
   width: 0;
   transition: all ease-in-out .3s;
   overflow: hidden;
 
   &_opened {
-    width: 300px;
+    width: 400px;
   }
 }

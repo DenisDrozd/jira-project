@@ -1,0 +1,18 @@
+<div class="aside"
+     [class.aside_opened]="item">
+  <div class="close" (click)="closeAside()">
+    CLOSE HERE
+  </div>
+  <ng-container *ngIf="item">
+    {{item | json}}
+    <div class="title">
+      {{item.task + '-' + item.number}}
+    </div>
+    <div class="description">
+      {{item.description}}
+    </div>
+    <div class="status" [ngClass]="checkStatus(item.status)">
+      {{item.status}}
+    </div>
+  </ng-container>
+</div>

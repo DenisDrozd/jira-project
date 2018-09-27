@@ -8,7 +8,7 @@
       <col width="228">
     </colgroup>
     <tr>
-      <td *ngFor="let column of dashboardList"
+      <td *ngFor="let column of dashboard"
           class="header-column">
         <div class="header-title">
           {{column.title}}
@@ -25,12 +25,13 @@
       <col width="228">
     </colgroup>
     <tr valign="top">
-      <td *ngFor="let column of dashboardList"
+      <td *ngFor="let column of dashboard"
           class="column"
           [dragula]="columns"
           [(dragulaModel)]='column.list'>
         <div *ngFor='let item of column.list'
-             class="item">
+             class="item"
+             (click)="moreInformation(item)">
           <div class="type-color"
                [ngClass]="chooseColorTask(item.type)" ></div>
           <div class="title">{{item.task}}-{{item.number}}</div>
@@ -41,3 +42,4 @@
     </tr>
   </table>
 </div>
+<aside class="aside" [item]="currentSelect" (close)="closeAside($event)"></aside>

@@ -3,13 +3,16 @@
 
 :host {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+}
+
+.dashboard {
   padding: 20px;
   overflow: auto;
 }
 
-.dashboard {
-  min-width: 960px;
+.aside {
+  flex-shrink: 0;
 }
 
 .header,

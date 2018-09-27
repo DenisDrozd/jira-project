@@ -13,3 +13,27 @@ export const CLASS_TASK_COLOR = [
   'b-story',
   'b-subtask'
 ];
+
+export enum STATUS_TASK {
+  TO_DO,
+  IN_PROGRESS,
+  CODEREVIEW,
+  IN_QA,
+  DONE
+}
+
+export const CLASS_STATUS_COLOR = [
+  'status-to-to',
+  'status-in-progress',
+  'status-codereview',
+  'status-in-qa',
+  'status-done'
+];
+
+export const STATUS_NAME = [
+  'To do',
+  'In progress',
+  'Codereview',
+  'In QA',
+  'Done'
+];

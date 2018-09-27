@@ -1,5 +1,5 @@
 import {Component, Output, EventEmitter, Input} from '@angular/core';
-import {CLASS_STATUS_COLOR} from '../../models/type-task.model';
+import {CLASS_STATUS_COLOR, STATUS_NAME} from '../../models/type-task.model';
 
 @Component({
   selector: 'aside',
@@ -16,5 +16,9 @@ export class AsideComponent {
 
   checkStatus(status) {
     return CLASS_STATUS_COLOR[status];
+  }
+
+  getStatusName(status) {
+    return STATUS_NAME[status];
   }
 }

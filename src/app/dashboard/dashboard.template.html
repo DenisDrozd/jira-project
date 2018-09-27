@@ -25,7 +25,8 @@
       <col width="228">
     </colgroup>
     <tr valign="top">
-      <td *ngFor="let column of dashboard"
+      <td *ngFor="let column of dashboard; let i = index"
+          id="{{i}}"
           class="column"
           [dragula]="columns"
           [(dragulaModel)]='column.list'>

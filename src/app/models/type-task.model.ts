@@ -29,3 +29,11 @@ export const CLASS_STATUS_COLOR = [
   'status-in-qa',
   'status-done'
 ];
+
+export const STATUS_NAME = [
+  'To do',
+  'In progress',
+  'Codereview',
+  'In QA',
+  'Done'
+];

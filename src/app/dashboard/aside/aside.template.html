@@ -11,8 +11,8 @@
     <div class="description">
       {{item.description}}
     </div>
-    <div class="status" [ngClass]="checkStatus(item.status)">
-      {{item.status}}
-    </div>
+    <span class="status" [ngClass]="checkStatus(item.status)">
+      {{getStatusName(item.status)}}
+    </span>
   </ng-container>
 </div>

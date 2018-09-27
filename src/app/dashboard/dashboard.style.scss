@@ -1,7 +1,54 @@
+@import 'src/styles/colors';
+@import 'src/styles/task-colors';
+
 :host {
   display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow: auto;
 }
 
-.test {
-  flex-grow: 1;
+.dashboard {
+  min-width: 960px;
+}
+
+.header,
+.columns {
+  width: 100%;
+  table-layout: fixed;
+  border-spacing: 8px;
+}
+
+.column {
+  background-color: $color-background;
+
+  & + & {
+    margin-left: 8px;
+  }
+}
+
+.column-title {
+  flex-shrink: 0;
+  height: 50px;
+}
+
+.item {
+  position: relative;
+  min-height: 66px;
+  padding: 10px 10px 10px 38px;
+  border: 1px solid $color-border;
+  background-color: $color-white;
+  cursor: move;
+
+  & + & {
+    border-top: none;
+  }
+}
+
+.type-color {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
 }

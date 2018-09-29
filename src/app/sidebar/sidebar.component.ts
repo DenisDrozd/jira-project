@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {MatDialog} from '@angular/material';
+import {NewTaskComponent} from '../dashboard/new-task/new-task.component';
 
 @Component({
   selector: 'sidebar',
@@ -7,5 +9,14 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./sidebar.style.scss']
 })
 export class SidebarComponent {
-  mode = new FormControl('over');
+  constructor(public dialog: MatDialog) {}
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(NewTaskComponent, {
+      width: '640px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
 }

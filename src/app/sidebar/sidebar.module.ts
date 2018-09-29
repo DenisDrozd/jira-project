@@ -6,15 +6,19 @@ import {
   MatCheckboxModule,
   MatRadioModule
 } from '@angular/material';
+import {NewTaskModule} from '../dashboard/new-task/new-task.module';
+import {NewTaskComponent} from '../dashboard/new-task/new-task.component';
 
 @NgModule({
   imports: [
     CommonModule,
     MatSidenavModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    NewTaskModule
   ],
   declarations: [SidebarComponent],
-  exports: [SidebarComponent]
+  exports: [SidebarComponent],
+  entryComponents: [NewTaskComponent]
 })
 export class SidebarModule {}

@@ -1,0 +1,45 @@
+<div class="header">
+  Create Issue
+</div>
+<div class="task-property">
+
+  <div class="field">
+    <div class="field-text" [class.field-text_important]="true">
+      Issue Type
+    </div>
+    <div class="field-option">
+      <div class="type-indeficator-select"
+           [ngClass]="getClassTypeSelectColor(selectedValue)"></div>
+      <mat-select placeholder="Choose type task"
+                  [(ngModel)]="selectedValue">
+        <ng-container *ngFor="let itemType of typeArray">
+          <mat-option class="type-indeficator"
+                      [ngClass]="getClassTypeColor(itemType.type)"
+                      [value]="itemType.type">
+            {{itemType.title}}
+          </mat-option>
+        </ng-container>
+      </mat-select>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="field-text" [class.field-text_important]="false">
+      ------
+    </div>
+    <div class="field-option">
+      <input value="">
+    </div>
+  </div>
+
+
+  <div class="field">
+    <div class="field-text" [class.field-text_important]="false">
+      Description
+    </div>
+    <div class="field-option">
+      <input value="">
+    </div>
+  </div>
+
+</div>

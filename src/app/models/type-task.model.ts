@@ -14,6 +14,29 @@ export const CLASS_TASK_COLOR = [
   'b-subtask'
 ];
 
+export const TYPE_TASK_ARRAY = [
+  {
+    title: 'Task',
+    type: TypeTask.TASK
+  },
+  {
+    title: 'Bugfix',
+    type: TypeTask.BUGFIX
+  },
+  {
+    title: 'Epic',
+    type: TypeTask.EPIC
+  },
+  {
+    title: 'Story',
+    type: TypeTask.STORY
+  },
+  {
+    title: 'SubTask',
+    type: TypeTask.SUBTASK
+  },
+];
+
 export enum STATUS_TASK {
   TO_DO,
   IN_PROGRESS,

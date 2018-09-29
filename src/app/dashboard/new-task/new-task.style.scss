@@ -1,0 +1,84 @@
+@import 'src/styles/colors';
+@import 'src/styles/task-colors';
+
+:host {
+  display: block;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  margin: -24px -24px 0 -24px;
+  padding: 0 24px;
+  border-bottom: 1px solid $color-border;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $color-background;
+}
+
+.task-property {
+  margin-top: 16px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  height: 48px;
+
+  & + & {
+    margin-top: 16px;
+  }
+}
+
+.field-text {
+  width: 130px;
+  padding-right: 20px;
+  flex-shrink: 0;
+  text-align: right;
+  color: $color-label;
+
+  &_important {
+    &:after {
+      content: '*';
+      color: darkred;
+    }
+  }
+}
+
+.field-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  height: 100%;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+
+  & /deep/ .mat-select-trigger {
+    padding: 14px 8px;
+    margin: 0 16px;
+  }
+}
+
+.type-indeficator {
+  border-left-width: 8px;
+  border-left-style: solid;
+}
+
+.type-indeficator-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 8px;
+}
+
+
+input {
+  height: 100%;
+  width: 100%;
+  padding: 0 22px;
+  border: none;
+  outline: none;
+}
